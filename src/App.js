@@ -1,11 +1,15 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+// Style
 import GlobalStyle from "./components/GlobalStyle";
 
+// Components
 import Nav from "./components/Nav";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
-import { Switch, Route } from "react-router-dom";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
   return (
@@ -17,8 +21,11 @@ function App() {
         <Route exact path="/">
           <AboutUs />
         </Route>
-        <Route path="/work">
+        <Route exact path="/work">
           <OurWork />
+        </Route>
+        <Route path="/work/:id">
+          <MovieDetails />
         </Route>
         <Route path="/contact">
           <ContactUs />
