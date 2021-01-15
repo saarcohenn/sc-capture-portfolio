@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Layout } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
-  const [faqToggle, setfaqToggle] = useState(false);
   return (
     <Faq>
       <h2>
