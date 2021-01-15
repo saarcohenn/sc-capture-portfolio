@@ -16,9 +16,15 @@ import {
   lineAnimation,
   slider,
   sliderContainer,
+  staticShow,
 } from "../animation";
+import { useScroll } from "../hooks/useScroll";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <motion.div variants={sliderContainer}>
@@ -27,7 +33,12 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
-      <Movie>
+      <Movie
+        ref={element}
+        variants={staticShow}
+        initial="hidden"
+        animate={controls}
+      >
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-athlete">
@@ -36,7 +47,12 @@ const OurWork = () => {
           </ImageFrame>
         </Link>
       </Movie>
-      <Movie>
+      <Movie
+        ref={element2}
+        variants={fade}
+        initial="hidden"
+        animate={controls2}
+      >
         <motion.h2 variants={fade}>The Racer</motion.h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-racer">
@@ -45,7 +61,12 @@ const OurWork = () => {
           </ImageFrame>
         </Link>
       </Movie>
-      <Movie>
+      <Movie
+        ref={element3}
+        variants={fade}
+        initial="hidden"
+        animate={controls3}
+      >
         <motion.h2 variants={fade}>Good Times</motion.h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/good-times">
@@ -71,10 +92,10 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
-    height: 0.5rem;
+    height: 0.3rem;
     background: #23d997;
     margin-bottom: 3rem;
   }

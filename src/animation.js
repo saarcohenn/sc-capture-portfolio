@@ -83,3 +83,10 @@ export const scrollReveal = {
     transition: { duration: 0.4, ease: "easeOut" },
   },
 };
+
+export const staticShow = {
+  hidden: { opacity: 1 },
+  show: {
+    opacity: 1,
+  },
+};
