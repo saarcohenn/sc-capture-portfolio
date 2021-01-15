@@ -10,10 +10,20 @@ import home2 from "../img/home2.png";
 // Styles
 import styled from "styled-components";
 import { Layout, Description, Image } from "../styles";
+import { useScroll } from "../hooks/useScroll";
+import { scrollReveal } from "../animation";
+
+// TEST
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      ref={element}
+      variants={scrollReveal}
+      initial="hidden"
+      animate={controls}
+    >
       <Description>
         <h2>
           High <span>quality</span> services
