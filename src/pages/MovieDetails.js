@@ -81,6 +81,10 @@ const Awards = styled.div`
   margin: -1rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 0rem 1rem;
+  }
 `;
 const ImageDisplay = styled.div`
   min-height: 50vh;
@@ -88,6 +92,9 @@ const ImageDisplay = styled.div`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+  @media (max-width: 1500px) {
+    display: none;
   }
 `;
 const Description = styled.div`
@@ -98,6 +105,9 @@ const Description = styled.div`
   }
   p {
     font-weight: lighter;
+  }
+  @media (max-width: 1500px) {
+    margin: 3rem 2rem 1rem 2rem;
   }
 `;
 

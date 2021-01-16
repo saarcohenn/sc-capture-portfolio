@@ -20,7 +20,6 @@ const Wave = () => {
           strokeWidth="10"
         />
       </WaveSvg>
-      ;
     </>
   );
 };

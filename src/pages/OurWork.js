@@ -94,6 +94,9 @@ const Work = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem;
+  }
 `;
 const Movie = styled(motion.div)`
   padding-bottom: 10rem;
@@ -119,6 +122,9 @@ const Frame1 = styled(motion.div)`
   height: 100vh;
   background: #fffebf;
   z-index: 2;
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 const Frame2 = styled(Frame1)`
   background: #ff8efb;
