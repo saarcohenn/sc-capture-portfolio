@@ -11,7 +11,7 @@ All rights preserve to Dev Ed.
 * Styled Components
 * CSS
 
-You are welcome to visit my website: 
+You are welcome to visit my website:
 https://sc-capture-portfolio.netlify.app
 
 Hope you will like it.
